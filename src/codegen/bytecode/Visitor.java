@@ -8,60 +8,73 @@ import codegen.bytecode.Ast.Program.ProgramSingle;
 import codegen.bytecode.Ast.Stm.*;
 import codegen.bytecode.Ast.Type.*;
 
-public interface Visitor
-{
-  // statements
-  public void visit(Aload s);
+public interface Visitor {
+    // statements
+    public void visit(Aload s);
 
-  public void visit(Areturn s);
+    public void visit(Areturn s);
 
-  public void visit(Astore s);
+    public void visit(Iastore s);
 
-  public void visit(Goto s);
+    public void visit(Iaload s);
 
-  public void visit(Ificmplt s);
+    public void visit(Astore s);
 
-  public void visit(Ifne s);
+    public void visit(Goto s);
 
-  public void visit(Iload s);
+    public void visit(GetField s);
 
-  public void visit(Imul s);
+    public void visit(Ificmplt s);
 
-  public void visit(Ireturn s);
+    public void visit(Ifne s);
 
-  public void visit(Istore s);
+    public void visit(Ifeq s);
 
-  public void visit(Isub s);
+    public void visit(Iload s);
 
-  public void visit(Invokevirtual s);
+    public void visit(Imul s);
 
-  public void visit(LabelJ s);
+    public void visit(Ireturn s);
 
-  public void visit(Ldc s);
+    public void visit(Istore s);
 
-  public void visit(Print s);
+    public void visit(Isub s);
 
-  public void visit(New s);
+    public void visit(Iadd s);
 
-  // type
-  public void visit(ClassType t);
+    public void visit(Invokevirtual s);
 
-  public void visit(Int t);
+    public void visit(LabelJ s);
 
-  public void visit(IntArray t);
+    public void visit(Ldc s);
 
-  // dec
-  public void visit(DecSingle d);
+    public void visit(Print s);
 
-  // method
-  public void visit(MethodSingle m);
+    public void visit(PutField s);
 
-  // class
-  public void visit(ClassSingle c);
+    public void visit(New s);
 
-  // main class
-  public void visit(MainClassSingle c);
+    public void visit(NewIntArray s);
 
-  // program
-  public void visit(ProgramSingle p);
+    // type
+    public void visit(ClassType t);
+
+    public void visit(Int t);
+
+    public void visit(IntArray t);
+
+    // dec
+    public void visit(DecSingle d);
+
+    // method
+    public void visit(MethodSingle m);
+
+    // class
+    public void visit(ClassSingle c);
+
+    // main class
+    public void visit(MainClassSingle c);
+
+    // program
+    public void visit(ProgramSingle p);
 }

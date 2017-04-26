@@ -1,5 +1,6 @@
 package slp;
 
+import java.util.LinkedList;
 
 public class Slp
 {

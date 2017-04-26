@@ -6,7 +6,7 @@ public class Tuple
 {
   public String classs; // name of the class
   public Type.T type; // type of the field
-  public String id; // name of the field or method
+  public String id; // name of the field
 
   public Tuple(String classs, Type.T type, String id)
   {

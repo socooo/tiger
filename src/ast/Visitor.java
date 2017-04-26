@@ -1,6 +1,5 @@
 package ast;
 
-
 import ast.Ast.Class;
 import ast.Ast.Dec;
 import ast.Ast.Exp.Add;
@@ -32,75 +31,76 @@ import ast.Ast.Type.ClassType;
 import ast.Ast.Type.Int;
 import ast.Ast.Type.IntArray;
 
-public interface Visitor
-{
-  // expressions
-  public void visit(Add e);
+public interface Visitor {
+    // expressions
+    //public void visit(Ast.Epsilon.Eps e);
 
-  public void visit(And e);
+    public void visit(Add e);
 
-  public void visit(ArraySelect e);
+    public void visit(And e);
 
-  public void visit(Call e);
+    public void visit(ArraySelect e);
 
-  public void visit(False e);
+    public void visit(Call e);
 
-  public void visit(Id e);
+    public void visit(False e);
 
-  public void visit(Length e);
+    public void visit(Id e);
 
-  public void visit(Lt e);
+    public void visit(Length e);
 
-  public void visit(NewIntArray e);
+    public void visit(Lt e);
 
-  public void visit(NewObject e);
+    public void visit(NewIntArray e);
 
-  public void visit(Not e);
+    public void visit(NewObject e);
 
-  public void visit(Num e);
+    public void visit(Not e);
 
-  public void visit(Sub e);
+    public void visit(Num e);
 
-  public void visit(This e);
+    public void visit(Sub e);
 
-  public void visit(Times e);
+    public void visit(This e);
 
-  public void visit(True e);
+    public void visit(Times e);
 
-  // statements
-  public void visit(Assign s);
+    public void visit(True e);
 
-  public void visit(AssignArray s);
+    // statements
+    public void visit(Assign s);
 
-  public void visit(Block s);
+    public void visit(AssignArray s);
 
-  public void visit(If s);
+    public void visit(Block s);
 
-  public void visit(Print s);
+    public void visit(If s);
 
-  public void visit(While s);
+    public void visit(Print s);
 
-  // type
-  public void visit(Boolean t);
+    public void visit(While s);
 
-  public void visit(ClassType t);
+    // type
+    public void visit(Boolean t);
 
-  public void visit(Int t);
+    public void visit(ClassType t);
 
-  public void visit(IntArray t);
+    public void visit(Int t);
 
-  // dec
-  public void visit(Dec.DecSingle d);
+    public void visit(IntArray t);
 
-  // method
-  public void visit(MethodSingle m);
+    // dec
+    public void visit(Dec.DecSingle d);
 
-  // class
-  public void visit(Class.ClassSingle c);
+    // method
+    public void visit(MethodSingle m);
 
-  // main class
-  public void visit(MainClassSingle c);
+    // class
+    public void visit(Class.ClassSingle c);
 
-  // program
-  public void visit(ast.Ast.Program.ProgramSingle p);
+    // main class
+    public void visit(MainClassSingle c);
+
+    // program
+    public void visit(ast.Ast.Program.ProgramSingle p);
 }

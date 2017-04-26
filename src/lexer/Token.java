@@ -12,27 +12,31 @@ public class Token
   public enum Kind {
     TOKEN_ADD, // "+"
     TOKEN_AND, // "&&"
-    TOKEN_ANNOTATION, // "//"
+    TOKEN_ANNOTATION_LINE, // " // "
     TOKEN_ASSIGN, // "="
     TOKEN_BOOLEAN, // "boolean"
     TOKEN_CLASS, // "class"
     TOKEN_COMMER, // ","
-    TOKEN_DIVIDE, // "/"
+    TOKEN_DIVIDED,  //  "/"
     TOKEN_DOT, // "."
     TOKEN_ELSE, // "else"
     TOKEN_EOF, // EOF
+    TOKEN_EQUEL,  //  "=="
     TOKEN_EXTENDS, // "extends"
     TOKEN_FALSE, // "false"
-    TOKEN_GT, //">"
+    TOKEN_GE,   //  ">="
+    TOKEN_GT,   //  ">"
     TOKEN_ID, // Identifier
     TOKEN_IF, // "if"
     TOKEN_INT, // "int"
     TOKEN_LBRACE, // "{"
     TOKEN_LBRACK, // "["
+    TOKEN_LE,   //  "<="
     TOKEN_LENGTH, // "length"
     TOKEN_LPAREN, // "("
     TOKEN_LT, // "<"
     TOKEN_MAIN, // "main"
+    TOKEN_NE,   // "!="
     TOKEN_NEW, // "new"
     TOKEN_NOT, // "!"
     TOKEN_NUM, // IntegerLiteral
@@ -57,6 +61,7 @@ public class Token
     TOKEN_TRUE, // "true"
     TOKEN_VOID, // "void"
     TOKEN_WHILE, // "while"
+    TOKEN_ZZUNDEFINE,  // "undefined token"
   }
 
   public Kind kind; // kind of the token
@@ -65,9 +70,6 @@ public class Token
 
   // Some tokens don't come with lexeme but 
   // others do.
-  public Token(){
-	  
-  }
   public Token(Kind kind, Integer lineNum)
   {
     this.kind = kind;
